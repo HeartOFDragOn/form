@@ -1,0 +1,69 @@
+#Head {
+	width: 100%;
+	height: 30px;
+	background-color: #3F5F5D;
+}
+
+.bg-img {
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+#Main .form {
+	width: 300px;
+	margin: 200px auto;
+}
+
+#Main .term-info {
+	position: relative;
+}
+
+#Main .info-line {
+	position: relative;
+	overflow: hidden;
+	width: 350px;
+	margin-top: 20px;
+}
+
+#Main .input-box {
+	float: left;
+	width: 300px;
+	height: 35px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	text-indent: 20px;
+	font-size: 14px;
+}
+
+#Main .error-img {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+
+#Main .drop-down-menu {
+	position: absolute;
+	width: 300px;
+	height: 140px;
+	z-index: 100;
+	top: 35px;
+	background-color: #FFF;
+	border: 1px solid #666; 
+	overflow-y: scroll;
+}
+
+#Main .drop-down-menu li {
+	height: 35px;
+	line-height: 35px;
+	color: #666;
+	cursor: pointer;
+	text-indent: 20px;
+}
+
+#Main .drop-down-menu li:hover {
+	background-color: #666;
+	color: #FFF;
+}
