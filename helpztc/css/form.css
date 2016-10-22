@@ -15,7 +15,7 @@
 	margin: 200px auto;
 }
 
-#Main .term-info {
+#Main .info {
 	position: relative;
 }
 
@@ -28,12 +28,13 @@
 
 #Main .input-box {
 	float: left;
-	width: 300px;
+	width: 260px;
 	height: 35px;
 	border: 1px solid grey;
 	border-radius: 5px;
-	text-indent: 20px;
 	font-size: 14px;
+	color: #666;
+	padding: 0 20px;
 }
 
 #Main .error-img {
@@ -47,12 +48,12 @@
 #Main .drop-down-menu {
 	position: absolute;
 	width: 300px;
-	height: 140px;
+	max-height: 140px;
 	z-index: 100;
 	top: 35px;
 	background-color: #FFF;
 	border: 1px solid #666; 
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 #Main .drop-down-menu li {
@@ -66,4 +67,56 @@
 #Main .drop-down-menu li:hover {
 	background-color: #666;
 	color: #FFF;
+}
+
+#Main .file-box {
+	float: left;
+	width: 260px;
+	height: 35px;
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 0 20px;
+	font-size: 14px;
+	color: #666;
+}
+
+#Main .upload-btn {
+	float: left;
+	display: inline-block;
+	width: 100px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	color: #FFF;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #969696;
+	margin-left: 10px;
+}
+
+#Main .upload-btn:hover {
+	background-color: #666;
+}
+
+#Main .choose-file-line {
+	width: 470px;
+	height: 37px;
+	margin-top: 20px;
+}
+
+#Main .submit-btn {
+	width: 300px;
+	height: 37px;
+	line-height: 37px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #00DDDD;
+	cursor: pointer;
+	display: inline-block;
+	color: #FFF;
+	font-size: 14px;
+}
+
+#Main .submit-btn:hover {
+	background-color: #143FFF;
 }

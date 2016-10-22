@@ -5,3 +5,11 @@
 .show {
 	display: inline-block;
 }
+
+.btn-blue {
+	background-color: #00BBDD;
+}
+
+.btn-grey {
+	background-color: #666;
+}

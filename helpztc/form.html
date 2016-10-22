@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>form</title>
 		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -13,13 +13,13 @@
 		<div id="Head"></div>
 		<div id="Main">
 			<div class="form">
-				<form method="POST" action="">
-					<div class="term-info">
+				<form method="POST" action="" class="form">
+					<div class="info term-info">
 						<div class="info-line">
 							<input type="text" name="term" class="input-box term" placeholder="Term"/>
-							<img src="images/error.png" class="error-img hidden"/>
+							<img src="images/error.png" class="error-img term-error hidden"/>
 						</div>
-						<div class="drop-down-menu hidden">
+						<div class="drop-down-menu term-menu hidden">
 							<ul>
 								<li>first</li>
 								<li>second</li>
@@ -32,17 +32,38 @@
 							</ul>
 						</div>
 					</div>
-					<div class="info-line">
-						<input type="text" name="subject" class="input-box subject" placeholder="Subject"/>
-						<img src="images/error.png" class="error-img hidden"/>
+					<div class="info subject-info">
+						<div class="info-line">
+							<input type="text" name="subject" class="input-box subject" placeholder="Subject"/>
+							<img src="images/error.png" class="error-img subject-error hidden"/>
+						</div>
+						<div class="drop-down-menu subject-menu hidden">
+							<ul>
+								<li>Math</li>
+							</ul>
+						</div>
+					</div>
+					<div class="info teacher-info">
+						<div class="info-line">
+							<input type="text" name="teacher" class="input-box teacher" placeholder="Teacher"/>
+							<img src="images/error.png" class="error-img teacher-error hidden"/>
+						</div>
+						<div class="drop-down-menu teacher-menu hidden">
+							<ul>
+								<li>Ma haiying</li>
+								<li>kaily</li>
+								<li>Vic</li>
+							</ul>
+						</div>
+					</div>
+					<div class="choose-file-line">
+						<input type="file" name="choose-file" class="input-box choose-file hidden" id="choose_file"/>
+						<input type="text" class="file-box" readonly="true" placeholder="Please choose a file" />
+						<label for="choose_file" class="upload-btn btn-grey">Upload</label>
+						<img src="images/error.png" class="error-img file-error hidden"/>
 					</div>
 					<div class="info-line">
-						<input type="text" name="teacher" class="input-box teacher" placeholder="Teacher"/>
-						<img src="images/error.png" class="error-img hidden"/>
-					</div>
-					<div class="info-line">
-						<input type="text" name="choose-file" class="input-box choose-file" placeholder="Please choose a file"/>
-						<img src="images/error.png" class="error-img hidden"/>
+						<input type="button" class="submit-btn btn-blue" value="Submit" />
 					</div>
 				</form>
 			</div>
