@@ -70,6 +70,16 @@ var form = (function() {
 		});
 	}
 
+	function resetInputBox() {
+		$('.reset-btn').on('click', function() {
+			 $('.term').val('');
+			 $('.subject').val('');
+			 $('.teacher').val('');
+			 $('.choose-file').val('');
+			 $('.file-box').val('');
+		});
+	}
+
 	function _init() {
 		showDropDownMenu();
 		getAChoice();
@@ -77,6 +87,7 @@ var form = (function() {
 		submitForm();
 		hideError();
 		hideDropDownMenu();
+		resetInputBox();
 	}
 
 	return {

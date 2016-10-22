@@ -10,9 +10,22 @@
 	z-index: -1;
 }
 
+#Main .title {
+	margin-top:  130px;
+	text-align: center;
+}
+
+#Main .title-info {
+	display: inline-block;
+	width: 600px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #666;
+}
+
 #Main .form {
 	width: 300px;
-	margin: 200px auto;
+	margin: 30px auto;
 }
 
 #Main .info {
@@ -30,7 +43,7 @@
 	float: left;
 	width: 260px;
 	height: 35px;
-	border: 1px solid grey;
+	border: 1px solid #BFBFBF;
 	border-radius: 5px;
 	font-size: 14px;
 	color: #666;
@@ -73,7 +86,7 @@
 	float: left;
 	width: 260px;
 	height: 35px;
-	border: 1px solid #666;
+	border: 1px solid #BFBFBF;
 	border-radius: 5px;
 	padding: 0 20px;
 	font-size: 14px;
@@ -84,18 +97,20 @@
 	float: left;
 	display: inline-block;
 	width: 100px;
-	height: 37px;
-	line-height: 37px;
+	height: 35px;
+	line-height: 35px;
 	text-align: center;
 	color: #FFF;
 	border-radius: 5px;
 	cursor: pointer;
-	background-color: #969696;
+	background-color: #D9D9D9;
 	margin-left: 10px;
+	color: #242424;
 }
 
 #Main .upload-btn:hover {
 	background-color: #666;
+	color: #FFF;
 }
 
 #Main .choose-file-line {
@@ -105,18 +120,19 @@
 }
 
 #Main .submit-btn {
-	width: 300px;
-	height: 37px;
-	line-height: 37px;
-	border-radius: 5px;
-	text-align: center;
 	background-color: #00DDDD;
-	cursor: pointer;
-	display: inline-block;
-	color: #FFF;
-	font-size: 14px;
 }
 
 #Main .submit-btn:hover {
 	background-color: #143FFF;
+}
+
+#Main .reset-btn {
+	background-color: #D9D9D9;
+	color: #242424;
+}
+
+#Main .reset-btn:hover {
+	background-color: #666;
+	color: #FFF;
 }
