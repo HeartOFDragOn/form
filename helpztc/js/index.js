@@ -7,7 +7,7 @@ var index = (function() {
 		$('.function-item').on('mouseenter', 'span', function() {
 			var $dropMenu = $(this).siblings('.drop-down-menu');
 			if($dropMenu) {
-				$dropMenu.show();
+				$dropMenu.fadeToggle();
 			}
 		});
 	}
