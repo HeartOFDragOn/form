@@ -1,5 +1,8 @@
 var index = (function() {
 
+	var MAX_PAGE = 3;
+	var interval;
+
 	function showDropDownMenu() { 
 		$('.function-item').on('mouseenter', 'span', function() {
 			var $dropMenu = $(this).siblings('.drop-down-menu');
@@ -18,30 +21,52 @@ var index = (function() {
 		});
 	}
 
+	function _changeHeader(obj, offset) {
+		clearInterval(interval);
+		var $header = obj.closest('#Header');
+		var page = $header.find('.img-menu:not(.hidden)').data('page-num');
+		var toPage = page + offset;
+		if(toPage <= 0) {
+			toPage = MAX_PAGE;
+		}
+		if(toPage > MAX_PAGE) {
+			toPage = 1;
+		}
+		var $currentPage = $header.find('.img-menu[data-page-num=' + page + ']');
+		var $toPage = $header.find('.img-menu[data-page-num=' + toPage + ']');
+		$currentPage.addClass('hidden');
+		$toPage.removeClass('hidden');
+		$header.find('.page-point[data-page-num=' + page + ']').removeClass('active');
+		$header.find('.page-point[data-page-num=' + toPage + ']').addClass('active');
+		autoChangeHeader();
+	}
+
 	function toggleHeader() {
 		$('.change-header-btns').on('click', '.previous', function() {
-			var $header = $(this).closest('#Header');
-			var page = $header.find('.img-menu:not(.hidden)').data('page-num');
-			var toPage = page - 1;
-			if(toPage <= 0) {
-				toPage = 3;
-			}
-			$header.find('.img-menu[data-page-num=' + page + ']').addClass('hidden');
-			$header.find('.img-menu[data-page-num=' + toPage + ']').removeClass('hidden');
-			$header.find('.page-point[data-page-num=' + page + ']').removeClass('active');
-			$header.find('.page-point[data-page-num=' + toPage + ']').addClass('active');
+			_changeHeader($(this), -1);
 		});
 		$('.change-header-btns').on('click', '.next', function() {
-			var $header = $(this).closest('#Header');
-			var page = $header.find('.img-menu:not(.hidden)').data('page-num');
-			var toPage = page + 1;
-			if(toPage > 3) {
-				toPage = 1;
-			}
-			$header.find('.img-menu[data-page-num=' + page + ']').addClass('hidden');
-			$header.find('.img-menu[data-page-num=' + toPage + ']').removeClass('hidden');
-			$header.find('.page-point[data-page-num=' + page + ']').removeClass('active');
-			$header.find('.page-point[data-page-num=' + toPage + ']').addClass('active');
+			_changeHeader($(this), 1);
+		});
+		$('.page-point').on('click', function() {
+			var toPage = $(this).data('page-num');
+			var currentPage = $('.active').data('page-num');
+			_changeHeader($(this), (toPage - currentPage));
+		});
+	}
+
+	function autoChangeHeader() {
+		interval = setInterval(function() {
+			$('.next').click();
+		}, 4000);
+	}
+
+	function focusOnHeader() {
+		$('#Header').on('mouseover', function() {
+			clearInterval(interval);
+		});
+		$('#Header').on('mouseleave', function() {
+			autoChangeHeader();
 		});
 	}
 
@@ -49,6 +74,8 @@ var index = (function() {
 		showDropDownMenu();
 		hideDropDownMenu();
 		toggleHeader();
+		autoChangeHeader();
+		focusOnHeader();
 	}
 
 	return {
