@@ -70,12 +70,53 @@ var index = (function() {
 		});
 	}
 
+	function toggleActiveCard() {
+		$('.card-item').on('mouseenter', function() {
+			var cardItems = $('.card-item');
+			var $this = $(this);
+			cardItems.each(function(index, item){
+				if($(item).hasClass('active')) {
+					var $currentItem = $(item);
+					$currentItem.removeClass('active');
+					//change the tab
+					var $greenTitle = $currentItem.find('.card-head-green');
+					$greenTitle.removeClass('card-head-green');
+					$greenTitle.addClass('card-head-grey');
+					$this.addClass('active');
+					var $cardTitle = $this.find('.card-title');
+					$cardTitle.removeClass('card-head-grey');
+					$cardTitle.addClass('card-head-green');
+					//change the title and content in main1 and title1
+					var $main1Active = $this.find('.card-main1');
+					var $titleContentActive1 = $cardTitle.find('.head-content1');
+					var $titleContent1 = $currentItem.find('.head-content1');
+					var $main1 = $currentItem.find('.card-main1');
+
+					$titleContent1.show();
+					$main1.show();
+					$titleContentActive1.hide();
+					$main1Active.hide();
+					//change the title and content in main2 and title2
+					var $main2Active = $this.find('.card-main2');
+					var $titleContentActive2 = $cardTitle.find('.head-content2');
+					var $titleContent2 = $currentItem.find('.head-content2');
+					var $main2 = $currentItem.find('.card-main2');
+					$titleContent2.hide();
+					$main2.hide();
+					$titleContentActive2.show();
+					$main2Active.show();
+				}
+			})
+		})
+	}
+
 	function _init() {
 		showDropDownMenu();
 		hideDropDownMenu();
 		toggleHeader();
 		autoChangeHeader();
 		focusOnHeader();
+		toggleActiveCard();
 	}
 
 	return {

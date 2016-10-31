@@ -1,5 +1,6 @@
 #Header {
 	position: relative;
+	min-width: 980px;
 }
 
 #Header .img-menu {
@@ -121,7 +122,7 @@
 }
 
 #Header .menu-item:hover {
-	background-color: #000;
+	background-color: rgba(25, 25, 112, .5);
 }
 
 #Header .drop-down-menu .menu-item:first-child {
@@ -203,12 +204,17 @@
 	font-size: 1.3rem;
 }
 
+#Header .btns-container {
+	width: 430px;
+	margin: 0 auto;
+}
+
 #Header .first-button {
 	background-color: #4187DB;
 	color: #FFF;
 	height: 49px;
 	line-height: 49px;
-	margin-left: 209px;
+	margin-left: 0;
 }
 
 #Header .second-button {
@@ -216,7 +222,7 @@
 	border: 1px solid #FFF;
 	height: 47px;
 	line-height: 47px;
-	margin-left: 44px;
+	margin-left: 42px;
 }
 
 #Header .first-button:hover,
@@ -264,7 +270,7 @@
 #Header .page-points .active {
 	width: 8px;
 	height: 8px;
-	background-color: #FFF;
+	background-color: #FFF; 
 }
 
 #Header .page-btn {
@@ -297,4 +303,415 @@
 
 #Header .third-menu {
 	background-color: rgba(255, 0, 0, .3);
+}
+
+#Main {
+	width: 100%;
+	position: relative;
+	min-width: 980px;
+	background-color: rgba(55, 61, 65, 0.05);
+}
+
+#Main .show-links {
+	width: 100%;
+	min-width: 980px;
+	height: 130px;
+	background-color: #A9C6E5;
+}
+
+#Main .main-spacial {
+	overflow: hidden;
+	width: 980px;
+	margin: 0 auto;
+	height: 130px;
+}
+
+#Main .main-spacial .main-spacial-item {
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	text-align: center;
+}
+
+#Main .main-spacial-item .link-item { 
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+#Main .main-spacial-item .link-first {
+	background: url(../images/link-bg-grey1.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-first:hover {
+	background: url(../images/link-bg1.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-second {
+	background: url(../images/link-bg-grey2.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-second:hover {
+	background: url(../images/link-bg2.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-third {
+	background: url(../images/link-bg-grey3.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-third:hover {
+	background: url(../images/link-bg3.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-fourth {
+	background: url(../images/link-bg-grey4.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-fourth:hover {
+	background: url(../images/link-bg4.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-fifth {
+	background: url(../images/link-bg-grey1.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .main-spacial-item .link-fifth:hover {
+	background: url(../images/link-bg1.png) no-repeat;
+	background-size: cover;
+}
+
+#Main .box-bg-even {
+	background-color: #e2e2e3;
+}
+
+#Main .box-bg-odd {
+	background-color: #ebebec;
+}
+
+#Main .slogan {
+	min-width: 980px;
+	line-height: 80px;
+	margin: 30px auto 0;
+	text-align: center;
+	color: #333;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+#Main .description {
+	height: 300px;
+	width: 100%;
+	min-width: 980px;
+}
+
+#Main .description-content {
+	width: 980px;
+	margin: 100px auto;
+	padding: 0 30px;
+}
+
+#Main .description-image-left {
+	display: inline-block;
+	height: 280px;
+	width: 288px;
+}
+
+#Main .description-image-right {
+	display: inline-block;
+	height: 200px;
+	margin-left: 70px;
+	width: 353px;
+}
+
+#Main .description-words-right {
+	width: 550px;
+	display: inline-block;
+	margin-left: 135px;
+	vertical-align: 100px;
+}
+
+
+#Main .description-words-left {
+	width: 550px;
+	display: inline-block;
+	vertical-align: 80px;
+}
+
+#Main .hot-model {
+	width: 100%;
+	min-height: 630px;
+	padding-top: 40px;
+	padding-bottom: 130px;
+}
+
+#Main .cards {
+	min-width: 980px;
+	max-width: 1200px;
+	height: 548px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#Main .card-list {
+	display: relative;
+}
+
+#Main .card {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#Main .card-item {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+	position: relative;
+	float: left;
+	display: block;
+	width: 22%;
+	height: 100%;
+	min-height: 548px;
+	background-color: #FFF;
+	border: 1px solid #DBDBDD;
+	margin-left: -1px;
+	box-sizing: border-box;
+}
+
+#Main .card-list .active {
+	z-index: 100;
+    border: 1px solid #00c1de;
+    box-shadow: 0 0 20px rgba(0, 198, 226, 0.5);
+    width: 34%;
+    height: 563px;
+}
+
+#Main .card-title {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+    left: 0;
+    right: -1px;
+    z-index: 1;
+}
+
+#Main .card-item .card-head-green {
+	position: absolute;
+	left: -1px;
+    background-color: #00c1de;
+    height: 185px;
+    top: -15px;
+}
+
+#Main .card-item .card-head-grey {
+    height: 170px;
+    top: 0;
+}
+
+#Main .card-odd {
+	background-color: #EBEBEC;
+}
+
+#Main .card-even {
+	background-color: #E5E6E6;
+}
+
+#Main .card-head-img {
+	width: 60px;
+	height: 60px;
+	margin-top: 15px;
+}
+
+#Main .card-head-title {
+	padding-top: 20px;
+	display: block;
+	font-size: 18px;
+    font-weight: bold;
+    color: #373D41;
+}
+
+#Main .head-content2 .card-head-title {
+	color: #FFF;
+	font-size: 22px;
+	padding-top: 25px;
+}
+
+#Main .head-content2 .card-subhead-title {
+	color: #FFF;
+	font-size: 16px;
+	margin-top: 8px;
+}
+
+#Main .head-content2 .card-head-img {
+	width: 70px;
+	height: 70px;
+}
+
+#Main .card-subhead-title {
+	display: block;
+	color: #949a9e;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#Main .card-main-content {
+	height: 376px;
+}
+
+#Main .card-main-content-list {
+	position: absolute;
+	width: 100%;
+	max-width: 250px;
+	margin-top: 47px;
+}
+
+#Main .card-main-content-item {
+	font-size: 16px;
+    color: #373D41;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+#Main .card-main-content2 {
+	width: 84%;
+	top: 170px;
+	position: absolute;
+	height: 376px;
+	max-width: 350px;
+	left: 8%;
+	padding-top: 26px;
+    font-size: 14px;
+    color: #a9b0b4;
+    text-align: left;
+    padding-top: 26px;
+}
+
+#Main .card-main-content2 .card-main-head {
+	max-width: 350px;
+	height: 150px;
+}
+
+#Main .card-main-content2 .card-main-head span {
+	font-size: 20px;
+	font-weight: bold;
+	color: #373D41;
+}
+
+#Main .card-main-content2 .card-main-head p {
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+#Main .card-main-content2 .card-main-head a {
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #FFF;
+	border: 1px solid #00c1de;
+	display: block;
+	color: #00c1de;
+	margin-top: 20px;
+}
+
+#Main .card-main-content2 .card-main-head a:hover {
+	background-color: #00c1de;
+	color: #FFF;
+}
+
+#Main .card-main-split {
+	width: 100%;
+	height: 10px;
+	border-top: 1px solid #a9b0b4;
+}
+
+#Main .card-main-links {
+	width: 100%;
+	height: 180px;
+}
+
+#Main .card-main-links .card-main-links-list {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#Main .card-main-links .card-main-links-item {
+	float: left;
+	width: 50%;
+	height: 50%;
+}
+
+#Main .card-main-links .card-main-links-item span {
+	font-size: 16px;
+	margin-top: 5px;
+	color: #373D41;
+}
+
+#Main .card-main-links .card-main-links-item p {
+	display: inline-block;
+	width: 100%;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+#Main .card-main-links .card-main-links-item a {
+	display: block;
+	font-size: 16px;
+	color: #00c1de;
+	margin-top: 5px;
+}
+
+#Footer {
+	position: relative;
+	min-width: 980px;
+}
+
+#Footer .function-box {
+	height: 160px;
+	background-color: rgb(59, 60, 61);
+	color: #FFF;
+	padding: 50px 0 30px;
+}
+
+#Footer .qrcode {
+	width: 245px;
+	height: 150px;
+	background: url(../images/erweima.gif) no-repeat;
+	margin: 0 auto;
+}
+
+#Footer .deperation-line {
+	background: url(../images/footer-top.gif) repeat;
+	min-width: 980px;
+	width: 100%;
+	height: 2px;
+}
+
+#Footer .connection-box {
+	background-color: #272727;
+}
+
+#Footer .connections {
+	min-width: 980px;
+	margin: 0 auto;
+	padding-top: 25px;
+	color: #CCC;
+}
+
+#Footer .address {
+	color: #999;
+	text-align: center;
+	padding-top: 20px;
+	min-width: 980px;
+	margin: 0 auto;
 }
